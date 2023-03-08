@@ -1,0 +1,35 @@
+#pragma once
+#include "comm.h"
+#include "km.h"
+
+//EXTERN_C NTSTATUS WINAPI Api_ComSend(ULONG64 cmd, ULONG64 inData, ULONG64 inLen, ULONG64 outData, ULONG64 outLen);
+//EXTERN_C BOOLEAN WINAPI Api_InitCom();
+EXTERN_C ULONG64 WINAPI Api_GetModuleBase(ULONG64 pid, char* name);
+EXTERN_C BOOLEAN WINAPI Api_ReadProcMemory(ULONG64 pid, ULONG64 dst, ULONG64 buf, ULONG64 len, ULONG64 way);
+EXTERN_C BOOLEAN WINAPI Api_WriteProcMemory(ULONG64 pid, ULONG64 dst, ULONG64 buf, ULONG64 len);
+EXTERN_C BOOLEAN WINAPI Api_InitProcProtect();
+EXTERN_C BOOLEAN WINAPI Api_UnloadProcProtect();
+EXTERN_C BOOLEAN WINAPI Api_AddProcProtect(ULONG64 pid);
+EXTERN_C BOOLEAN WINAPI Api_RemoteCall(ULONG64 pid, ULONG64 tid, REMOTE_CALL_MODE mode, ULONG64 shellcode, ULONG64 len);
+EXTERN_C ULONG64 WINAPI Api_GetExpFuncAddrOfProcModule(ULONG64 pid, char* moduleName, char* funcName);
+EXTERN_C ULONG64 WINAPI Api_AllocaProcMemory(ULONG64 pid, ULONG64 size);
+EXTERN_C BOOLEAN WINAPI Api_FreeProcMemory(ULONG64 pid, ULONG64 base);
+//EXTERN_C BOOLEAN WINAPI Api_TestCom();
+EXTERN_C BOOLEAN WINAPI Api_LoadDriver();
+EXTERN_C ULONG64 WINAPI Api_FindProcSignCode(ULONG64 pid, ULONG64 base, ULONG64 sign, ULONG64 len);
+EXTERN_C BOOLEAN WINAPI Api_HideProcessByPid(ULONG64 pid, ULONG64 dstpid);
+EXTERN_C BOOLEAN WINAPI Api_UnloadDriver();
+EXTERN_C BOOLEAN WINAPI Api_VirBypass(char* pname);
+EXTERN_C BOOLEAN WINAPI Api_DeleteFileForce(char* path);
+
+
+
+EXTERN_C BOOLEAN WINAPI Api_KmInstall();
+EXTERN_C BOOLEAN WINAPI Api_KmKeyDown(ULONG64 kVal);
+EXTERN_C BOOLEAN WINAPI Api_KmKeyUp(ULONG64 kVal);
+EXTERN_C BOOLEAN WINAPI Api_KmMouseLeftDown();
+EXTERN_C BOOLEAN WINAPI Api_KmMouseLeftUp();
+EXTERN_C BOOLEAN WINAPI Api_KmMouseRightDown();
+EXTERN_C BOOLEAN WINAPI Api_KmMouseRightUp();
+EXTERN_C BOOLEAN WINAPI Api_KmMouseMoveRelative(LONG64 dx, LONG64 dy);
+EXTERN_C BOOLEAN WINAPI Api_KmMouseMoveTo(LONG64 dx, LONG64 dy);

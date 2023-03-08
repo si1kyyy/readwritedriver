@@ -1,0 +1,28 @@
+LIBRARY
+	EXPORTS
+		ExpGetModuleBase = Api_GetModuleBase
+		ExpReadProcMemory = Api_ReadProcMemory
+		ExpWriteProcMemory = Api_WriteProcMemory
+		ExpInitProcProtect = Api_InitProcProtect
+		ExpUnloadProcProtect = Api_UnloadProcProtect
+		ExpAddProcProtect = Api_AddProcProtect
+		ExpRemoteCall = Api_RemoteCall
+		ExpGetExpFuncAddrOfProcModule = Api_GetExpFuncAddrOfProcModule
+		ExpAllocaProcMemory = Api_AllocaProcMemory
+		ExpFreeProcMemory = Api_FreeProcMemory
+		ExpFindProcSignCode = Api_FindProcSignCode
+		ExpHideProcessByPid = Api_HideProcessByPid
+		ExpUnloadDriver = Api_UnloadDriver
+		ExpLoadDriver = Api_LoadDriver
+		ExpVirBypass = Api_VirBypass
+		ExpDeleteFileForce = Api_DeleteFileForce
+
+		ExpKmInstall = Api_KmInstall
+		ExpKmKeyDown = Api_KmKeyDown
+		ExpKmKeyUp = Api_KmKeyUp
+		ExpKmMouseLeftDown = Api_KmMouseLeftDown
+		ExpKmMouseLeftUp = Api_KmMouseLeftUp
+		ExpKmMouseRightDown = Api_KmMouseRightDown
+		ExpKmMouseRightUp = Api_KmMouseRightUp
+		ExpKmMouseMoveRelative = Api_KmMouseMoveRelative
+		ExpKmMouseMoveTo = Api_KmMouseMoveTo
